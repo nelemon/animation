@@ -3,33 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animation Test</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
+    <title>Test Background Color</title>
     <style>
-        /* Центрируем анимацию на черном фоне */
+        /* Устанавливаем черный фон и центрируем содержимое */
         body, html {
             margin: 0;
             padding: 0;
+            height: 100vh;
+            background-color: #000000; /* Черный фон */
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            background-color: #000000; /* Черный фон */
+            color: white; /* Белый текст для видимости */
         }
     </style>
 </head>
 <body>
-    <div id="animationContainer" style="width: 200px; height: 200px;"></div>
-
-    <script>
-        // Загружаем и воспроизводим анимацию
-        lottie.loadAnimation({
-            container: document.getElementById('animationContainer'),
-            renderer: 'svg',
-            loop: true,
-            autoplay: true,
-            path: 'assets/loading.json' // Путь к файлу анимации
-        });
-    </script>
+    <h1>Тест: Черный фон</h1>
 </body>
 </html>
