@@ -21,20 +21,6 @@
             text-align: center;
         }
 
-        .animation-box {
-            width: 100px;
-            height: 100px;
-            background-color: #ff4081; /* Цвет для анимации */
-            margin: 20px auto;
-            transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-            opacity: 0; /* Начальная прозрачность */
-        }
-
-        .animate {
-            transform: scale(1.5); /* Увеличение размера */
-            opacity: 1; /* Полная непрозрачность */
-        }
-
         #loadingAnimation {
             position: absolute; /* Позиционируем анимацию */
             top: 50%; /* Центрируем по вертикали */
@@ -50,15 +36,11 @@
 <body>
     <div class="container">
         <h1 class="title">Анимация</h1>
-        <div class="animation-box" id="animationBox"></div>
-        <button id="animateButton">Запустить анимацию</button>
         <!-- Контейнер для анимации Lottie -->
         <div id="loadingAnimation"></div>
     </div>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            const animationBox = document.getElementById("animationBox");
-            const animateButton = document.getElementById("animateButton");
             const loadingAnimationContainer = document.getElementById("loadingAnimation");
 
             // Загрузка анимации loading.json
@@ -69,5 +51,7 @@
                 loop: true,
                 autoplay: true, // Начинать анимацию сразу
             });
-
-            // Запус
+        });
+    </script>
+</body>
+</html>
