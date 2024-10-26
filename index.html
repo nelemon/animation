@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> <!-- Запрет увеличения -->
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Signals</title>
+</head>
+<body>
+    <div class="container">
+        <div class="background"></div> <!-- Добавлен фон -->
+        <h1 class="mines-title">MINES</h1> <!-- Добавлена надпись -->
+        <div class="grid" id="tileGrid"></div> <!-- Контейнер для плиток -->
+        
+        <button id="getSignalButton">
+            <img src="/signals/assets/getSignal.png" alt="Получить сигнал">
+        </button>
+        
+        <div class="image-row">
+            <button class="small-icon circle minus-button"> <!-- Кнопка minus слева -->
+                <img src="/signals/assets/minus.png" alt="Minus">
+            </button>
+            <div class="trap-number">1</div> <!-- Цифра ловушки -->
+            <button class="small-icon circle plus-button"> <!-- Кнопка plus справа -->
+                <img src="/signals/assets/plus.png" alt="Plus">
+            </button>
+        </div>
+        
+        <img src="/signals/assets/countTrap.png" alt="Count Trap" class="count-trap">
+        
+        <div class="stars-container"></div> <!-- Контейнер для звезд -->
+    </div>
+    <script src="assets/main.js"></script>
+</body>
+</html>
