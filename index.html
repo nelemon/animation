@@ -1,35 +1,37 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> <!-- Запрет увеличения -->
-    <link rel="stylesheet" href="assets/style.css">
-    <title>Signals</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Test</title>
+    <!-- Подключение библиотеки Lottie -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
+    <style>
+        /* Центрируем анимацию на экране */
+        body, html {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #0D0924;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="background"></div> <!-- Добавлен фон -->
-        <h1 class="mines-title">MINES</h1> <!-- Добавлена надпись -->
-        <div class="grid" id="tileGrid"></div> <!-- Контейнер для плиток -->
-        
-        <button id="getSignalButton">
-            <img src="/signals/assets/getSignal.png" alt="Получить сигнал">
-        </button>
-        
-        <div class="image-row">
-            <button class="small-icon circle minus-button"> <!-- Кнопка minus слева -->
-                <img src="/signals/assets/minus.png" alt="Minus">
-            </button>
-            <div class="trap-number">1</div> <!-- Цифра ловушки -->
-            <button class="small-icon circle plus-button"> <!-- Кнопка plus справа -->
-                <img src="/signals/assets/plus.png" alt="Plus">
-            </button>
-        </div>
-        
-        <img src="/signals/assets/countTrap.png" alt="Count Trap" class="count-trap">
-        
-        <div class="stars-container"></div> <!-- Контейнер для звезд -->
-    </div>
-    <script src="assets/main.js"></script>
+    <!-- Контейнер для анимации Lottie -->
+    <div id="animationContainer" style="width: 200px; height: 200px;"></div>
+
+    <script>
+        // Загружаем и воспроизводим анимацию
+        lottie.loadAnimation({
+            container: document.getElementById('animationContainer'), // Контейнер для отображения анимации
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: '/animation/assets/loading.json' // Путь к анимации
+        });
+    </script>
 </body>
 </html>
