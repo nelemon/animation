@@ -1,0 +1,228 @@
+body {
+    background-color: #0D0924; /* Темный фон */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+}
+
+.background {
+    position: absolute;
+    top: 35px;
+    left: -35px;
+    width: calc(5 * 45px + 4 * 8px + 70px);
+    height: calc(5 * 45px + 4 * 8px + 70px);
+    background-image: url('/signals/assets/backgroundPlitki.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.mines-title {
+    position: absolute;
+    top: -47px; /* Смещение текста вниз на 5px */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 50px;
+    font-family: 'Inter', sans-serif;
+    line-height: 1;
+    display: inline-flex;
+    z-index: 1;
+}
+
+.letter {
+    font-weight: 800;
+    color: #ffffff;
+    display: inline-block;
+    animation: float 1.5s ease-in-out infinite;
+    transform-origin: center;
+}
+
+/* Анимация для букв MINES */
+.letter:nth-child(2) { animation-delay: 0.1s; } /* I с задержкой 0.1 секунд */
+.letter:nth-child(3) { animation-delay: 0.2s; } /* N с задержкой 0.2 секунд */
+.letter:nth-child(4) { animation-delay: 0.3s; } /* E с задержкой 0.3 секунд */
+.letter:nth-child(5) { animation-delay: 0.4s; } /* S с задержкой 0.4 секунд */
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); } /* Подъем вверх на 6px */
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 45px);
+    grid-template-rows: repeat(5, 45px);
+    gap: 8px;
+    margin-bottom: 20px;
+    margin-top: 70px;
+}
+
+.tile {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    background: url('/signals/assets/plitka.png') no-repeat center center / cover;
+    cursor: pointer;
+}
+
+.stars-container {
+    display: grid;
+    grid-template-columns: repeat(5, 45px);
+    grid-template-rows: repeat(5, 45px);
+    gap: 8px;
+    position: absolute;
+    top: 70px;
+    left: 0;
+}
+
+.star {
+    width: 32px;
+    height: 32px;
+    background: url('/signals/assets/star.png') no-repeat center center / cover;
+    opacity: 0;
+    transition: opacity 1s;
+    position: relative;
+    top: 6.5px;
+    left: 6.5px;
+}
+
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    margin-top: 130px;
+    z-index: 2;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    width: 135px;
+    height: auto;
+}
+
+button img {
+    width: 135px;
+    height: auto;
+    display: block;
+}
+
+button:disabled img {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+button:active {
+    background-color: #061E5B;
+}
+
+/* Стили текста вместо изображения countTrap */
+.count-trap-text {
+    position: absolute;
+    top: 372px; /* Положение текста */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 28px;
+    font-weight: 800; /* Extra Bold */
+    font-family: 'Inter', sans-serif; /* Шрифт Inter */
+    color: #ffffff; /* Белый цвет */
+    line-height: 1;
+    white-space: nowrap; /* Запрет переноса текста */
+}
+
+.image-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    position: absolute;
+    top: 412px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+button.small-icon.circle {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    position: relative;
+    top: -3px;
+}
+
+button.small-icon.circle img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.small-icon.rectangular {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    margin-top: -3px;
+}
+
+.image-row img {
+    margin-top: -5px;
+}
+
+.trap-number {
+    font-size: 32px;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1;
+    position: relative;
+    top: -6px;
+}
+
+/* Настройки для анимации загрузки */
+#loadingAnimation {
+    position: absolute;
+    top: calc(50% - 80px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px; /* Ширина анимации */
+    height: 80px; /* Высота анимации */
+    z-index: 10; /* Слой над другими элементами */
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.show-star {
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
