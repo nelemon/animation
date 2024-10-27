@@ -1,20 +1,14 @@
 const animationElement = document.getElementById('animation');
 let currentRotation = 0; // Начальный угол поворота
-const intervalDuration = 2400; // Интервал в 2.4 секунды
 
+// Функция для запуска бесконечной анимации
 function startAnimation() {
     setInterval(() => {
-        setTimeout(() => {
-            currentRotation += 180; // Поворачиваем элемент на 180 градусов
-            animationElement.style.transform = `rotate(${currentRotation}deg)`; // Применяем поворот
-            
-            // Возвращаем исходное положение на 180 градусов через 0.2 секунды (после 1.3 секунд от начала цикла)
-            setTimeout(() => {
-                animationElement.style.transform = `rotate(${currentRotation}deg)`; // Оставляем элемент повернутым
-            }, 200); // Задержка в 0.2 секунды
-        }, 1100); // Поворот начинается через 1.1 секунды
-    }, intervalDuration); // Запуск цикла каждые 2.4 секунды
+        currentRotation += 180; // Увеличиваем угол поворота на 180 градусов
+        animationElement.style.transform = `rotate(${currentRotation}deg)`; // Применяем поворот
+    }, 1100); // Каждую 1 секунду
+    }, 1200); // Каждую 1 секунду
 }
 
-// Запуск анимации
+// Запускаем анимацию
 startAnimation();
