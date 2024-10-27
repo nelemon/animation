@@ -1,6 +1,6 @@
 const animationElement = document.getElementById('animation');
 let currentRotation = 0; // Начальный угол поворота
-const intervalDuration = 2400; // Интервал в 2.4 секунды
+const intervalDuration = 1200; // Интервал в 1.2 секунды
 
 function startAnimation() {
     setInterval(() => {
