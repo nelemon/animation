@@ -2,8 +2,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #000000;
+    height: 100vh; /* Занимает всю высоту окна */
+    background-color: #000; /* Устанавливаем черный фон */
+    margin: 0; /* Убираем отступы */
 }
 
 .animate {
