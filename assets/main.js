@@ -1,11 +1,16 @@
 const animationElement = document.getElementById('animation');
 
-// Функция для запуска анимации
+// Функция для запуска бесконечной анимации
 function startAnimation() {
-    // Анимация длится 2 секунды
-    setTimeout(() => {
-        animationElement.classList.add('rotate'); // Добавляем класс для поворота
-    }, 1000); // Через 1 секунду
+    setInterval(() => {
+        // Добавляем класс для поворота
+        animationElement.classList.add('rotate');
+
+        // Удаляем класс после 0.2 секунды
+        setTimeout(() => {
+            animationElement.classList.remove('rotate');
+        }, 200); // 200 миллисекунд
+    }, 1000); // Каждую 1 секунду
 }
 
 // Запускаем анимацию
