@@ -3,55 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Тестовая анимация</title>
-    <style>
-        body {
-            background-color: #000000; /* Темный фон */
-            color: #ffffff; /* Белый цвет текста */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            position: relative; /* Для абсолютного позиционирования анимации */
-        }
-
-        .container {
-            text-align: center;
-        }
-
-        #loadingAnimation {
-            position: absolute; /* Позиционируем анимацию */
-            top: 50%; /* Центрируем по вертикали */
-            left: 50%; /* Центрируем по горизонтали */
-            transform: translate(-50%, -50%); /* Центрируем элемент */
-            width: 100px; /* Ширина анимации */
-            height: 100px; /* Высота анимации */
-            z-index: 10; /* Слой над другими элементами */
-        }
-    </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.10.2/lottie.min.js"></script>
+    <title>Анимация с поворотом</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1 class="title">Анимация</h1>
-        <!-- Контейнер для анимации Lottie -->
-        <div id="loadingAnimation"></div>
-    </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const loadingAnimationContainer = document.getElementById("loadingAnimation");
-
-            // Загрузка анимации loading.json
-            const loadingAnimation = lottie.loadAnimation({
-                container: loadingAnimationContainer,
-                path: '/animation/assets/loading.json', // Укажите путь к вашему файлу loading.json
-                renderer: 'svg',
-                loop: true,
-                autoplay: true, // Начинать анимацию сразу
-            });
-        });
-    </script>
+    <div id="animation" class="animate">Анимация</div>
+    <script src="script.js"></script>
 </body>
 </html>
