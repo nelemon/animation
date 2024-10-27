@@ -10,5 +10,5 @@ body {
 .animate {
     width: 100px; /* Ширина анимации (можете изменить) */
     height: auto; /* Авто-высота, чтобы сохранить пропорции */
-    transition: transform 0.3s; /* Плавный поворот */
+    transition: transform 0.1s; /* Плавный поворот */
 }
