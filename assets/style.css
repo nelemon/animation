@@ -10,9 +10,9 @@ body {
 .animate {
     width: 100px; /* Ширина анимации (можете изменить) */
     height: auto; /* Авто-высота, чтобы сохранить пропорции */
-    transition: transform 0.2s; /* Плавный поворот */
+    transition: transform 0.3s; /* Плавный поворот */
 }
-
+ы
 .paused {
     animation-play-state: paused; /* Приостанавливаем анимацию */
 }
