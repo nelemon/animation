@@ -12,7 +12,7 @@ body {
     height: auto; /* Авто-высота, чтобы сохранить пропорции */
     transition: transform 0.2s; /* Плавный поворот */
 }
-ы
+
 .paused {
     animation-play-state: paused; /* Приостанавливаем анимацию */
 }
