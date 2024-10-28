@@ -5,8 +5,8 @@ let currentRotation = 0; // Начальный угол поворота
 function startAnimation() {
     setInterval(() => {
         currentRotation += 180; // Увеличиваем угол поворота на 180 градусов
-        animationElement.style.transform = rotate(${currentRotation}deg); // Применяем поворот
-    }, 1000); // Каждую 1 секунду 
+        animationElement.style.transform = `rotate(${currentRotation}deg)`; // Применяем поворот
+    }, 1000); // Каждую 1 секунду
 }
 
 // Запускаем анимацию
