@@ -14,10 +14,10 @@ async function startAnimation() {
         animationElement.style.transform = `rotate(${currentRotation}deg)`; // Применяем поворот
 
         // Ждем завершения поворота (должно совпадать с transition в CSS)
-        await delay(200); // 200 мс - время поворота
+        await delay(400); // 200 мс - время поворота
 
         animationElement.classList.remove('paused'); // Снимаем паузу с GIF
-        await delay(800); // Ждем перед следующим поворотом
+        await delay(600); // Ждем перед следующим поворотом
     }
 }
 
